@@ -7,11 +7,15 @@ module.exports = {
         let { displayName, text, time } = req.body;
         messages.push({ id, displayName, text, time});
         id++;
+        console.log(messages)
         res.send(messages);
+        
     },
 
     read: (req, res) => {
+        console.log(messages)
         res.send(messages);
+
     },
 
     update: (req, res) => {
